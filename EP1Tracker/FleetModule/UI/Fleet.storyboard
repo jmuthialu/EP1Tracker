@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FleetMapVC-->
+        <scene sceneID="DIj-SK-9Hj">
+            <objects>
+                <viewController storyboardIdentifier="FleetMapVC" id="aKI-dw-9VT" userLabel="FleetMapVC" customClass="FleetMapVC" customModule="EP1Tracker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V4N-eY-Ifg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cw7-hA-mY4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mcD-Gv-Iv8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cw7-hA-mY4" firstAttribute="top" secondItem="mcD-Gv-Iv8" secondAttribute="top" id="6c9-dd-Asb"/>
+                            <constraint firstItem="mcD-Gv-Iv8" firstAttribute="bottom" secondItem="cw7-hA-mY4" secondAttribute="bottom" id="ISb-EA-IbR"/>
+                            <constraint firstItem="cw7-hA-mY4" firstAttribute="leading" secondItem="mcD-Gv-Iv8" secondAttribute="leading" id="L3y-CP-I6t"/>
+                            <constraint firstItem="mcD-Gv-Iv8" firstAttribute="trailing" secondItem="cw7-hA-mY4" secondAttribute="trailing" id="cFW-zD-5os"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fleet Tracker" id="kU7-hl-VEp"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="cw7-hA-mY4" id="gEu-P0-M8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UrS-9E-8Fe" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3337.68115942029" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

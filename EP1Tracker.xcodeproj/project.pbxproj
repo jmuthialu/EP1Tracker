@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B841BBF325D9AD5B00AF8712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BBF225D9AD5B00AF8712 /* AppDelegate.swift */; };
-		B841BBF525D9AD5B00AF8712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BBF425D9AD5B00AF8712 /* SceneDelegate.swift */; };
+		B82819E525DC4C2B008DD025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82819DD25DC4C2B008DD025 /* Assets.xcassets */; };
+		B82819E625DC4C2B008DD025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82819DE25DC4C2B008DD025 /* LaunchScreen.storyboard */; };
+		B82819E725DC4C2B008DD025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82819E025DC4C2B008DD025 /* Main.storyboard */; };
+		B82819E825DC4C2B008DD025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819E225DC4C2B008DD025 /* AppDelegate.swift */; };
+		B82819EA25DC4C2B008DD025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819E425DC4C2B008DD025 /* SceneDelegate.swift */; };
+		B82819F725DC4DD0008DD025 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819F425DC4DD0008DD025 /* UIView+Extension.swift */; };
+		B82819F825DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819F525DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift */; };
+		B82819F925DC4DD0008DD025 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819F625DC4DD0008DD025 /* ViewController+Extension.swift */; };
 		B841BBF725D9AD5B00AF8712 /* FleetMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BBF625D9AD5B00AF8712 /* FleetMapVC.swift */; };
-		B841BBFA25D9AD5B00AF8712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B841BBF825D9AD5B00AF8712 /* Main.storyboard */; };
-		B841BBFC25D9AD5C00AF8712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B841BBFB25D9AD5C00AF8712 /* Assets.xcassets */; };
-		B841BBFF25D9AD5C00AF8712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B841BBFD25D9AD5C00AF8712 /* LaunchScreen.storyboard */; };
 		B841BC1625D9AE4A00AF8712 /* JSONCodableOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BC0F25D9AE4A00AF8712 /* JSONCodableOperation.swift */; };
 		B841BC1725D9AE4A00AF8712 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BC1025D9AE4A00AF8712 /* NetworkOperation.swift */; };
 		B841BC1825D9AE4A00AF8712 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BC1125D9AE4A00AF8712 /* URLBuilder.swift */; };
@@ -21,10 +24,7 @@
 		B841BC2A25D9B2DC00AF8712 /* Pallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BC2925D9B2DC00AF8712 /* Pallet.swift */; };
 		B841BC3425D9B6C400AF8712 /* FleetMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BC3325D9B6C400AF8712 /* FleetMapVM.swift */; };
 		B8AB0EC825DB356F003A5BB9 /* PalletAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EC725DB356F003A5BB9 /* PalletAnnotationView.swift */; };
-		B8AB0ECC25DB436B003A5BB9 /* CLLocationCoordinate2D+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0ECB25DB436B003A5BB9 /* CLLocationCoordinate2D+Codable.swift */; };
 		B8AB0ED125DB6ABA003A5BB9 /* FleetListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0ED025DB6ABA003A5BB9 /* FleetListVC.swift */; };
-		B8AB0ED725DB6BF5003A5BB9 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0ED625DB6BF5003A5BB9 /* ViewController+Extension.swift */; };
-		B8AB0EDA25DB6C14003A5BB9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0ED925DB6C14003A5BB9 /* UIView+Extension.swift */; };
 		B8AB0EE125DB6E6B003A5BB9 /* FleetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EDF25DB6E6B003A5BB9 /* FleetListCell.swift */; };
 		B8AB0EE225DB6E6B003A5BB9 /* FleetListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8AB0EE025DB6E6B003A5BB9 /* FleetListCell.xib */; };
 		B8AB0EE725DB7419003A5BB9 /* Fleet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */; };
@@ -33,14 +33,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B82819D525DC4C25008DD025 /* GPS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPS.png; sourceTree = "<group>"; };
+		B82819D625DC4C25008DD025 /* GPS180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPS180x180.png; sourceTree = "<group>"; };
+		B82819D725DC4C25008DD025 /* GPA60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPA60x60.png; sourceTree = "<group>"; };
+		B82819D825DC4C25008DD025 /* GPS120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPS120x120.png; sourceTree = "<group>"; };
+		B82819DA25DC4C25008DD025 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		B82819DB25DC4C25008DD025 /* truck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truck.png; sourceTree = "<group>"; };
+		B82819DD25DC4C2B008DD025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B82819DF25DC4C2B008DD025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B82819E125DC4C2B008DD025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B82819E225DC4C2B008DD025 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B82819E325DC4C2B008DD025 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82819E425DC4C2B008DD025 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B82819F425DC4DD0008DD025 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B82819F525DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Codable.swift"; sourceTree = "<group>"; };
+		B82819F625DC4DD0008DD025 /* ViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		B841BBEF25D9AD5B00AF8712 /* EP1Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EP1Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B841BBF225D9AD5B00AF8712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B841BBF425D9AD5B00AF8712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B841BBF625D9AD5B00AF8712 /* FleetMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetMapVC.swift; sourceTree = "<group>"; };
-		B841BBF925D9AD5B00AF8712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B841BBFB25D9AD5C00AF8712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B841BBFE25D9AD5C00AF8712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B841BC0025D9AD5C00AF8712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B841BC0F25D9AE4A00AF8712 /* JSONCodableOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCodableOperation.swift; sourceTree = "<group>"; };
 		B841BC1025D9AE4A00AF8712 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		B841BC1125D9AE4A00AF8712 /* URLBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
@@ -49,17 +58,8 @@
 		B841BC2425D9B0E900AF8712 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B841BC2925D9B2DC00AF8712 /* Pallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallet.swift; sourceTree = "<group>"; };
 		B841BC3325D9B6C400AF8712 /* FleetMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetMapVM.swift; sourceTree = "<group>"; };
-		B8AB0EBF25DB33FF003A5BB9 /* GPS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPS.png; sourceTree = "<group>"; };
-		B8AB0EC025DB33FF003A5BB9 /* GPS180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPS180x180.png; sourceTree = "<group>"; };
-		B8AB0EC125DB33FF003A5BB9 /* GPA60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPA60x60.png; sourceTree = "<group>"; };
-		B8AB0EC225DB33FF003A5BB9 /* GPS120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPS120x120.png; sourceTree = "<group>"; };
-		B8AB0EC425DB33FF003A5BB9 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
-		B8AB0EC525DB33FF003A5BB9 /* truck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truck.png; sourceTree = "<group>"; };
 		B8AB0EC725DB356F003A5BB9 /* PalletAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalletAnnotationView.swift; sourceTree = "<group>"; };
-		B8AB0ECB25DB436B003A5BB9 /* CLLocationCoordinate2D+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Codable.swift"; sourceTree = "<group>"; };
 		B8AB0ED025DB6ABA003A5BB9 /* FleetListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetListVC.swift; sourceTree = "<group>"; };
-		B8AB0ED625DB6BF5003A5BB9 /* ViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
-		B8AB0ED925DB6C14003A5BB9 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B8AB0EDF25DB6E6B003A5BB9 /* FleetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetListCell.swift; sourceTree = "<group>"; };
 		B8AB0EE025DB6E6B003A5BB9 /* FleetListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FleetListCell.xib; sourceTree = "<group>"; };
 		B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fleet.storyboard; sourceTree = "<group>"; };
@@ -78,14 +78,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B82819D325DC4C25008DD025 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B82819D425DC4C25008DD025 /* AppIcon */,
+				B82819D925DC4C25008DD025 /* Icons */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B82819D425DC4C25008DD025 /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				B82819D525DC4C25008DD025 /* GPS.png */,
+				B82819D625DC4C25008DD025 /* GPS180x180.png */,
+				B82819D725DC4C25008DD025 /* GPA60x60.png */,
+				B82819D825DC4C25008DD025 /* GPS120x120.png */,
+			);
+			path = AppIcon;
+			sourceTree = "<group>";
+		};
+		B82819D925DC4C25008DD025 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B82819DA25DC4C25008DD025 /* pin.png */,
+				B82819DB25DC4C25008DD025 /* truck.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		B82819DC25DC4C2B008DD025 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B82819DD25DC4C2B008DD025 /* Assets.xcassets */,
+				B82819DE25DC4C2B008DD025 /* LaunchScreen.storyboard */,
+				B82819E025DC4C2B008DD025 /* Main.storyboard */,
+				B82819E225DC4C2B008DD025 /* AppDelegate.swift */,
+				B82819E325DC4C2B008DD025 /* Info.plist */,
+				B82819E425DC4C2B008DD025 /* SceneDelegate.swift */,
+			);
+			name = "Supporting Files";
+			path = "EP1Tracker/Supporting Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		B82819F325DC4DD0008DD025 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B82819F425DC4DD0008DD025 /* UIView+Extension.swift */,
+				B82819F525DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift */,
+				B82819F625DC4DD0008DD025 /* ViewController+Extension.swift */,
+			);
+			name = Utilities;
+			path = EP1Tracker/Utilities;
+			sourceTree = SOURCE_ROOT;
+		};
 		B841BBE625D9AD5B00AF8712 = {
 			isa = PBXGroup;
 			children = (
 				B841BC2425D9B0E900AF8712 /* README.md */,
 				B841BBF125D9AD5B00AF8712 /* EP1Tracker */,
-				B8AB0ECA25DB434A003A5BB9 /* Utilities */,
-				B8AB0EBD25DB33FF003A5BB9 /* Images */,
-				B841BC0825D9AD9600AF8712 /* Supporting Files */,
 				B841BBF025D9AD5B00AF8712 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,21 +154,11 @@
 			children = (
 				B841BC0B25D9ADD700AF8712 /* FleetModule */,
 				B841BC0C25D9ADE500AF8712 /* NetworkModule */,
+				B82819F325DC4DD0008DD025 /* Utilities */,
+				B82819DC25DC4C2B008DD025 /* Supporting Files */,
+				B82819D325DC4C25008DD025 /* Images */,
 			);
 			path = EP1Tracker;
-			sourceTree = "<group>";
-		};
-		B841BC0825D9AD9600AF8712 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B841BBF825D9AD5B00AF8712 /* Main.storyboard */,
-				B841BBF225D9AD5B00AF8712 /* AppDelegate.swift */,
-				B841BBF425D9AD5B00AF8712 /* SceneDelegate.swift */,
-				B841BC0025D9AD5C00AF8712 /* Info.plist */,
-				B841BBFB25D9AD5C00AF8712 /* Assets.xcassets */,
-				B841BBFD25D9AD5C00AF8712 /* LaunchScreen.storyboard */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B841BC0B25D9ADD700AF8712 /* FleetModule */ = {
@@ -163,45 +204,6 @@
 				B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		B8AB0EBD25DB33FF003A5BB9 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				B8AB0EBE25DB33FF003A5BB9 /* AppIcon */,
-				B8AB0EC325DB33FF003A5BB9 /* Icons */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		B8AB0EBE25DB33FF003A5BB9 /* AppIcon */ = {
-			isa = PBXGroup;
-			children = (
-				B8AB0EBF25DB33FF003A5BB9 /* GPS.png */,
-				B8AB0EC025DB33FF003A5BB9 /* GPS180x180.png */,
-				B8AB0EC125DB33FF003A5BB9 /* GPA60x60.png */,
-				B8AB0EC225DB33FF003A5BB9 /* GPS120x120.png */,
-			);
-			path = AppIcon;
-			sourceTree = "<group>";
-		};
-		B8AB0EC325DB33FF003A5BB9 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				B8AB0EC425DB33FF003A5BB9 /* pin.png */,
-				B8AB0EC525DB33FF003A5BB9 /* truck.png */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
-		B8AB0ECA25DB434A003A5BB9 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				B8AB0ED625DB6BF5003A5BB9 /* ViewController+Extension.swift */,
-				B8AB0ED925DB6C14003A5BB9 /* UIView+Extension.swift */,
-				B8AB0ECB25DB436B003A5BB9 /* CLLocationCoordinate2D+Codable.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,11 +263,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B841BBFF25D9AD5C00AF8712 /* LaunchScreen.storyboard in Resources */,
 				B8AB0EE725DB7419003A5BB9 /* Fleet.storyboard in Resources */,
-				B841BBFC25D9AD5C00AF8712 /* Assets.xcassets in Resources */,
+				B82819E725DC4C2B008DD025 /* Main.storyboard in Resources */,
+				B82819E625DC4C2B008DD025 /* LaunchScreen.storyboard in Resources */,
+				B82819E525DC4C2B008DD025 /* Assets.xcassets in Resources */,
 				B8AB0EE225DB6E6B003A5BB9 /* FleetListCell.xib in Resources */,
-				B841BBFA25D9AD5B00AF8712 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,22 +278,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8AB0EDA25DB6C14003A5BB9 /* UIView+Extension.swift in Sources */,
 				B841BC1625D9AE4A00AF8712 /* JSONCodableOperation.swift in Sources */,
 				B8AB0EF325DB97A8003A5BB9 /* ContainerView.swift in Sources */,
+				B82819F725DC4DD0008DD025 /* UIView+Extension.swift in Sources */,
 				B841BC2A25D9B2DC00AF8712 /* Pallet.swift in Sources */,
-				B8AB0ED725DB6BF5003A5BB9 /* ViewController+Extension.swift in Sources */,
 				B841BC1825D9AE4A00AF8712 /* URLBuilder.swift in Sources */,
+				B82819F825DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift in Sources */,
+				B82819E825DC4C2B008DD025 /* AppDelegate.swift in Sources */,
+				B82819EA25DC4C2B008DD025 /* SceneDelegate.swift in Sources */,
 				B841BC3425D9B6C400AF8712 /* FleetMapVM.swift in Sources */,
 				B8AB0EE125DB6E6B003A5BB9 /* FleetListCell.swift in Sources */,
 				B841BBF725D9AD5B00AF8712 /* FleetMapVC.swift in Sources */,
 				B8AB0ED125DB6ABA003A5BB9 /* FleetListVC.swift in Sources */,
-				B8AB0ECC25DB436B003A5BB9 /* CLLocationCoordinate2D+Codable.swift in Sources */,
 				B8AB0EC825DB356F003A5BB9 /* PalletAnnotationView.swift in Sources */,
-				B841BBF325D9AD5B00AF8712 /* AppDelegate.swift in Sources */,
 				B841BC1A25D9AE4A00AF8712 /* NetworkService.swift in Sources */,
+				B82819F925DC4DD0008DD025 /* ViewController+Extension.swift in Sources */,
 				B8AB0EEE25DB7CF1003A5BB9 /* FleetListVM.swift in Sources */,
-				B841BBF525D9AD5B00AF8712 /* SceneDelegate.swift in Sources */,
 				B841BC1925D9AE4A00AF8712 /* NetworkContext.swift in Sources */,
 				B841BC1725D9AE4A00AF8712 /* NetworkOperation.swift in Sources */,
 			);
@@ -300,20 +302,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B841BBF825D9AD5B00AF8712 /* Main.storyboard */ = {
+		B82819DE25DC4C2B008DD025 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B841BBF925D9AD5B00AF8712 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B841BBFD25D9AD5C00AF8712 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B841BBFE25D9AD5C00AF8712 /* Base */,
+				B82819DF25DC4C2B008DD025 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B82819E025DC4C2B008DD025 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B82819E125DC4C2B008DD025 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -442,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QP8Z378EKD;
-				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INFOPLIST_FILE = "EP1Tracker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QP8Z378EKD;
-				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INFOPLIST_FILE = "EP1Tracker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

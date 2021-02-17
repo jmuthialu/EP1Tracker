@@ -17,7 +17,9 @@
                         <viewLayoutGuide key="safeArea" id="q49-wp-2vF"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IJA-ED-byR"/>
+                    <navigationItem key="navigationItem" id="IJA-ED-byR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="vwv-rx-Csu"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPO-vC-tmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

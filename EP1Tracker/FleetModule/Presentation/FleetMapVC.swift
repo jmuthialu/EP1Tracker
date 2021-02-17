@@ -16,7 +16,7 @@ class FleetMapVC: UIViewController {
     var viewModel = FleetMapVM()
     var fleetListVC: FleetListVC?
     var listContainerView = ExpandableContainerView()
-    
+    var foregroundObserver: NSObjectProtocol?
     var cancellable = Set<AnyCancellable>()
     
     struct Constants {
@@ -33,8 +33,15 @@ class FleetMapVC: UIViewController {
         mapView.register(PalletAnnotationView.self, forAnnotationViewWithReuseIdentifier: "pallet")
         
         addMapListView()
+        addRefreshControl()
+        addForegroundObserver()
     }
-        
+    
+    deinit {
+        guard let foregroundObserver = foregroundObserver else { return }
+        NotificationCenter.default.removeObserver(foregroundObserver)
+    }
+            
     func bindPublishers() {
         viewModel.$pallets
             .sink { [weak self] (pallets) in
@@ -82,5 +89,26 @@ class FleetMapVC: UIViewController {
         fleetListVC?.delegate = self
         self.embedChildController(containerView: listContainerView.containerView,
                                   childController: fleetListVC)
+    }
+    
+    func addRefreshControl() {
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                        target: self,
+                                        action: #selector(refreshData))
+        navigationItem.rightBarButtonItem = refreshButton
+    }
+    
+    @objc
+    func refreshData() {
+        viewModel.loadPallets()
+    }
+    
+    func addForegroundObserver() {
+        foregroundObserver = NotificationCenter
+            .default.addObserver(forName: UIApplication.willEnterForegroundNotification,
+                                 object: nil,
+                                 queue: .main) { [weak self] notification in
+                self?.viewModel.loadPallets()
+        }
     }
 }

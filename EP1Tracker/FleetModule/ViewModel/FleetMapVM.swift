@@ -17,6 +17,7 @@ class FleetMapVM {
             guard let ePallets = pallets as? [Pallet],
                   error == nil else { return }
             self?.pallets = ePallets
+            print("\(#function) - pallet count: \(ePallets.count)")
         }
     }
 }

@@ -17,22 +17,18 @@ extension UIViewController {
         guard let containerView = containerView else { return }
         
         addChild(childController)
-        
-        self.beginAppearanceTransition(true, animated: false)
+    
         containerView.embedChildView(childView: childController.view)
         UIView.animate(withDuration: animationTime) {
             self.view.layoutIfNeeded()
-            self.endAppearanceTransition()
             self.didMove(toParent: self)
         }
     }
     
     func removeFromParentController() {
         willMove(toParent: nil)
-        beginAppearanceTransition(false, animated: false)
         view.removeFromSuperview()
         removeFromParent()
-        endAppearanceTransition()
         didMove(toParent: nil)
     }
 

@@ -12,6 +12,11 @@ class Pallet: NSObject, MKAnnotation, Decodable {
     var id: Int = 0
     var model = ""
     var status = ""
-    var imageName = "pallet"
+    var title: String?
+    var imageName = ""
     var coordinate = CLLocationCoordinate2D()
+    
+    static func ==(lhs: Pallet, rhs: Pallet) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

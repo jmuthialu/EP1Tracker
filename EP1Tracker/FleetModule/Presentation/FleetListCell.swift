@@ -17,8 +17,8 @@ class FleetListCell: UITableViewCell {
     }
     
     func configure(pallet: Pallet) {
-        palletLabel.text = pallet.model
-        if let image = UIImage(named: pallet.imageName) {
+        palletLabel.text = String(pallet.title ?? "no title")
+        if let image = UIImage(systemName: "cube.box") {
             palletImageView.image = image
         }
     }

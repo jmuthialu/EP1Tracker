@@ -15,6 +15,8 @@
 		B82819F725DC4DD0008DD025 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819F425DC4DD0008DD025 /* UIView+Extension.swift */; };
 		B82819F825DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819F525DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift */; };
 		B82819F925DC4DD0008DD025 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819F625DC4DD0008DD025 /* ViewController+Extension.swift */; };
+		B82819FE25DC7130008DD025 /* FleetMapVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82819FD25DC7130008DD025 /* FleetMapVC+Extensions.swift */; };
+		B8281A1725DCBF69008DD025 /* PulloutIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8281A1625DCBF69008DD025 /* PulloutIndicatorView.swift */; };
 		B841BBF725D9AD5B00AF8712 /* FleetMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BBF625D9AD5B00AF8712 /* FleetMapVC.swift */; };
 		B841BC1625D9AE4A00AF8712 /* JSONCodableOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BC0F25D9AE4A00AF8712 /* JSONCodableOperation.swift */; };
 		B841BC1725D9AE4A00AF8712 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841BC1025D9AE4A00AF8712 /* NetworkOperation.swift */; };
@@ -29,7 +31,7 @@
 		B8AB0EE225DB6E6B003A5BB9 /* FleetListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8AB0EE025DB6E6B003A5BB9 /* FleetListCell.xib */; };
 		B8AB0EE725DB7419003A5BB9 /* Fleet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */; };
 		B8AB0EEE25DB7CF1003A5BB9 /* FleetListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EED25DB7CF1003A5BB9 /* FleetListVM.swift */; };
-		B8AB0EF325DB97A8003A5BB9 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EF225DB97A8003A5BB9 /* ContainerView.swift */; };
+		B8AB0EF325DB97A8003A5BB9 /* ExpandableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EF225DB97A8003A5BB9 /* ExpandableContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		B82819F425DC4DD0008DD025 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B82819F525DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Codable.swift"; sourceTree = "<group>"; };
 		B82819F625DC4DD0008DD025 /* ViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		B82819FD25DC7130008DD025 /* FleetMapVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FleetMapVC+Extensions.swift"; sourceTree = "<group>"; };
+		B8281A1625DCBF69008DD025 /* PulloutIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulloutIndicatorView.swift; sourceTree = "<group>"; };
 		B841BBEF25D9AD5B00AF8712 /* EP1Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EP1Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B841BBF625D9AD5B00AF8712 /* FleetMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetMapVC.swift; sourceTree = "<group>"; };
 		B841BC0F25D9AE4A00AF8712 /* JSONCodableOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCodableOperation.swift; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		B8AB0EE025DB6E6B003A5BB9 /* FleetListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FleetListCell.xib; sourceTree = "<group>"; };
 		B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fleet.storyboard; sourceTree = "<group>"; };
 		B8AB0EED25DB7CF1003A5BB9 /* FleetListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetListVM.swift; sourceTree = "<group>"; };
-		B8AB0EF225DB97A8003A5BB9 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		B8AB0EF225DB97A8003A5BB9 /* ExpandableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		B82819D325DC4C25008DD025 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B82819DD25DC4C2B008DD025 /* Assets.xcassets */,
 				B82819D425DC4C25008DD025 /* AppIcon */,
 				B82819D925DC4C25008DD025 /* Icons */,
 			);
@@ -110,11 +115,10 @@
 		B82819DC25DC4C2B008DD025 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B82819DD25DC4C2B008DD025 /* Assets.xcassets */,
 				B82819DE25DC4C2B008DD025 /* LaunchScreen.storyboard */,
 				B82819E025DC4C2B008DD025 /* Main.storyboard */,
-				B82819E225DC4C2B008DD025 /* AppDelegate.swift */,
 				B82819E325DC4C2B008DD025 /* Info.plist */,
+				B82819E225DC4C2B008DD025 /* AppDelegate.swift */,
 				B82819E425DC4C2B008DD025 /* SceneDelegate.swift */,
 			);
 			name = "Supporting Files";
@@ -124,13 +128,31 @@
 		B82819F325DC4DD0008DD025 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B82819F625DC4DD0008DD025 /* ViewController+Extension.swift */,
 				B82819F425DC4DD0008DD025 /* UIView+Extension.swift */,
 				B82819F525DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift */,
-				B82819F625DC4DD0008DD025 /* ViewController+Extension.swift */,
 			);
 			name = Utilities;
 			path = EP1Tracker/Utilities;
 			sourceTree = SOURCE_ROOT;
+		};
+		B8281A1425DCBE74008DD025 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B841BC3325D9B6C400AF8712 /* FleetMapVM.swift */,
+				B8AB0EED25DB7CF1003A5BB9 /* FleetListVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B8281A1525DCBED8008DD025 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B8AB0EF225DB97A8003A5BB9 /* ExpandableContainerView.swift */,
+				B8281A1625DCBF69008DD025 /* PulloutIndicatorView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
 		};
 		B841BBE625D9AD5B00AF8712 = {
 			isa = PBXGroup;
@@ -153,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				B841BC0B25D9ADD700AF8712 /* FleetModule */,
+				B8281A1525DCBED8008DD025 /* Shared */,
 				B841BC0C25D9ADE500AF8712 /* NetworkModule */,
 				B82819F325DC4DD0008DD025 /* Utilities */,
 				B82819DC25DC4C2B008DD025 /* Supporting Files */,
@@ -164,8 +187,9 @@
 		B841BC0B25D9ADD700AF8712 /* FleetModule */ = {
 			isa = PBXGroup;
 			children = (
-				B841BC2825D9B2AE00AF8712 /* UI */,
-				B841BC2725D9B2A300AF8712 /* DataModel */,
+				B841BC2825D9B2AE00AF8712 /* Presentation */,
+				B8281A1425DCBE74008DD025 /* ViewModel */,
+				B841BC2725D9B2A300AF8712 /* Model */,
 			);
 			path = FleetModule;
 			sourceTree = "<group>";
@@ -173,37 +197,35 @@
 		B841BC0C25D9ADE500AF8712 /* NetworkModule */ = {
 			isa = PBXGroup;
 			children = (
+				B841BC1125D9AE4A00AF8712 /* URLBuilder.swift */,
 				B841BC1325D9AE4A00AF8712 /* NetworkService.swift */,
 				B841BC1025D9AE4A00AF8712 /* NetworkOperation.swift */,
 				B841BC0F25D9AE4A00AF8712 /* JSONCodableOperation.swift */,
 				B841BC1225D9AE4A00AF8712 /* NetworkContext.swift */,
-				B841BC1125D9AE4A00AF8712 /* URLBuilder.swift */,
 			);
 			path = NetworkModule;
 			sourceTree = "<group>";
 		};
-		B841BC2725D9B2A300AF8712 /* DataModel */ = {
+		B841BC2725D9B2A300AF8712 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B841BC2925D9B2DC00AF8712 /* Pallet.swift */,
 			);
-			path = DataModel;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		B841BC2825D9B2AE00AF8712 /* UI */ = {
+		B841BC2825D9B2AE00AF8712 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				B841BBF625D9AD5B00AF8712 /* FleetMapVC.swift */,
-				B841BC3325D9B6C400AF8712 /* FleetMapVM.swift */,
+				B82819FD25DC7130008DD025 /* FleetMapVC+Extensions.swift */,
 				B8AB0EC725DB356F003A5BB9 /* PalletAnnotationView.swift */,
 				B8AB0ED025DB6ABA003A5BB9 /* FleetListVC.swift */,
-				B8AB0EED25DB7CF1003A5BB9 /* FleetListVM.swift */,
 				B8AB0EDF25DB6E6B003A5BB9 /* FleetListCell.swift */,
 				B8AB0EE025DB6E6B003A5BB9 /* FleetListCell.xib */,
-				B8AB0EF225DB97A8003A5BB9 /* ContainerView.swift */,
 				B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */,
 			);
-			path = UI;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,10 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B841BC1625D9AE4A00AF8712 /* JSONCodableOperation.swift in Sources */,
-				B8AB0EF325DB97A8003A5BB9 /* ContainerView.swift in Sources */,
+				B8AB0EF325DB97A8003A5BB9 /* ExpandableContainerView.swift in Sources */,
+				B82819FE25DC7130008DD025 /* FleetMapVC+Extensions.swift in Sources */,
 				B82819F725DC4DD0008DD025 /* UIView+Extension.swift in Sources */,
 				B841BC2A25D9B2DC00AF8712 /* Pallet.swift in Sources */,
 				B841BC1825D9AE4A00AF8712 /* URLBuilder.swift in Sources */,
+				B8281A1725DCBF69008DD025 /* PulloutIndicatorView.swift in Sources */,
 				B82819F825DC4DD0008DD025 /* CLLocationCoordinate2D+Codable.swift in Sources */,
 				B82819E825DC4C2B008DD025 /* AppDelegate.swift in Sources */,
 				B82819EA25DC4C2B008DD025 /* SceneDelegate.swift in Sources */,

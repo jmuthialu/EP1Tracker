@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,7 +33,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q49-wp-2vF"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yti-d6-7O8" firstAttribute="centerY" secondItem="L7G-G6-N0e" secondAttribute="centerY" id="FYS-P8-asn"/>
                             <constraint firstItem="yti-d6-7O8" firstAttribute="centerX" secondItem="L7G-G6-N0e" secondAttribute="centerX" id="G3v-VS-K8m"/>
@@ -257,9 +258,80 @@
             </objects>
             <point key="canvasLocation" x="3929" y="76"/>
         </scene>
+        <!--Pallet DetailVC-->
+        <scene sceneID="dZz-ng-q0l">
+            <objects>
+                <viewController storyboardIdentifier="PalletDetailVC" id="rQ8-D7-Ert" customClass="PalletDetailVC" customModule="EP1Tracker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qqh-6W-QKp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiN-jm-Vbt">
+                                <rect key="frame" x="15" y="144" width="384" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kl7-Fm-KFr" userLabel="DismissButton">
+                                <rect key="frame" x="354" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jx8-Ui-HzA"/>
+                                    <constraint firstAttribute="width" constant="30" id="t9J-Le-8Uh"/>
+                                </constraints>
+                                <state key="normal">
+                                    <imageReference key="image" image="dismiss" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="rQ8-D7-Ert" eventType="touchUpInside" id="twD-wi-W3K"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="raw-bu-Atl">
+                                <rect key="frame" x="232.5" y="238" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchTapped:" destination="rQ8-D7-Ert" eventType="valueChanged" id="l5s-Cn-tqC"/>
+                                </connections>
+                            </switch>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yTA-nq-xBd">
+                                <rect key="frame" x="311.5" y="235" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDp-RT-541">
+                                <rect key="frame" x="96.5" y="241.5" width="106" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="77Q-RD-7Jy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="raw-bu-Atl" firstAttribute="top" secondItem="eiN-jm-Vbt" secondAttribute="bottom" constant="70" id="9GE-9b-xTP"/>
+                            <constraint firstItem="raw-bu-Atl" firstAttribute="leading" secondItem="mDp-RT-541" secondAttribute="trailing" constant="30" id="CpV-fn-IGT"/>
+                            <constraint firstItem="77Q-RD-7Jy" firstAttribute="trailing" secondItem="Kl7-Fm-KFr" secondAttribute="trailing" constant="30" id="CqM-J0-9Pk"/>
+                            <constraint firstItem="77Q-RD-7Jy" firstAttribute="trailing" secondItem="eiN-jm-Vbt" secondAttribute="trailing" constant="15" id="EkY-ts-KVE"/>
+                            <constraint firstItem="eiN-jm-Vbt" firstAttribute="centerX" secondItem="Qqh-6W-QKp" secondAttribute="centerX" id="P8N-vj-gxf"/>
+                            <constraint firstItem="Kl7-Fm-KFr" firstAttribute="top" secondItem="77Q-RD-7Jy" secondAttribute="top" constant="20" id="W3B-uo-csh"/>
+                            <constraint firstItem="eiN-jm-Vbt" firstAttribute="top" secondItem="77Q-RD-7Jy" secondAttribute="top" constant="100" id="ZH5-kp-MxU"/>
+                            <constraint firstItem="mDp-RT-541" firstAttribute="centerY" secondItem="raw-bu-Atl" secondAttribute="centerY" id="bHp-bs-GfV"/>
+                            <constraint firstItem="yTA-nq-xBd" firstAttribute="leading" secondItem="raw-bu-Atl" secondAttribute="trailing" constant="30" id="fe9-88-LjC"/>
+                            <constraint firstItem="eiN-jm-Vbt" firstAttribute="leading" secondItem="77Q-RD-7Jy" secondAttribute="leading" constant="15" id="lRB-NB-jcs"/>
+                            <constraint firstItem="raw-bu-Atl" firstAttribute="centerX" secondItem="Qqh-6W-QKp" secondAttribute="centerX" constant="50" id="r8B-Vb-wbX"/>
+                            <constraint firstItem="yTA-nq-xBd" firstAttribute="centerY" secondItem="raw-bu-Atl" secondAttribute="centerY" id="uWk-E4-Lwa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="yTA-nq-xBd" id="rKh-aN-GIF"/>
+                        <outlet property="lockSwitch" destination="raw-bu-Atl" id="DGF-Dm-Bvt"/>
+                        <outlet property="palletTitleLabel" destination="eiN-jm-Vbt" id="jqF-nO-a3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHQ-dP-UXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4868" y="76"/>
+        </scene>
     </scenes>
     <resources>
         <image name="GPSLocation" width="256" height="256"/>
+        <image name="dismiss" width="512" height="512"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="shippingbox.fill" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">

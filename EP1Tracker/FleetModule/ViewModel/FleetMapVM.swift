@@ -18,6 +18,17 @@ class FleetMapVM {
                   error == nil else { return }
             self?.pallets = ePallets
             print("\(#function) - pallet count: \(ePallets.count)")
+            _ = ePallets.map { (pallet)  in
+                print(pallet.id, pallet.title ?? "", pallet.isLocked)
+            }
         }
+    }
+}
+
+extension FleetMapVM: PalletDelegate {
+    
+    // Refresh fleet if a pallet's lock is toggled
+    func lockToggled() {
+        loadPallets()
     }
 }

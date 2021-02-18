@@ -16,6 +16,23 @@ extension FleetMapVC : MKMapViewDelegate {
         return annotationView
     }
     
+    func mapView(_ mapView: MKMapView,
+                 annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+        
+        if let pallet = view.annotation as? Pallet {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = sb.instantiateViewController(identifier: "PalletDetailVC") as? PalletDetailVC {
+                vc.pallet = pallet
+                vc.delegate = viewModel
+                self.present(vc, animated: true, completion: nil)
+            }
+            
+        }
+        
+    }
+    
+    
 }
 
 extension FleetMapVC: ExpandableContainerViewDelegate {

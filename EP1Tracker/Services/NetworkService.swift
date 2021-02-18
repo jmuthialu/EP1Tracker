@@ -47,4 +47,23 @@ class NetworkService {
         networkOperationQueue.addOperation(jsonCodableOperation)
         networkOperationQueue.addOperation { completion(context.finalDecodedObject , context.error) }
     }
+    
+    func updatePallet(palletId: String,
+                      isLocked: String,
+                      completion: @escaping (_ error: Error?) -> Void)  {
+        
+        guard let updateUrl = URLBuilder
+                .lockUrlByPalletId(palletId: palletId,
+                                   isLocked: isLocked) else { return }
+        
+        print("updatePallet url: \(updateUrl)")
+        
+        let context = NetworkContext()
+        let updateOperation = NetworkPostOperation(url: updateUrl,
+                                                         context: context,
+                                                         httpBody: nil)
+        networkOperationQueue.addOperation(updateOperation)
+        networkOperationQueue.addOperation { completion(context.error) }
+        
+    }
 }

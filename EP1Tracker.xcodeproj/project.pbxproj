@@ -31,11 +31,11 @@
 		B8850D8125DD9FC000CF2C10 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8850D8025DD9FC000CF2C10 /* User.swift */; };
 		B8850D8425DDC9BB00CF2C10 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8850D8325DDC9BB00CF2C10 /* AuthService.swift */; };
 		B88D16F625DE038D00B3031C /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D16F525DE038D00B3031C /* UserDefaults+Extension.swift */; };
+		B88D16F925DE1DC500B3031C /* PalletDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D16F825DE1DC500B3031C /* PalletDetailVC.swift */; };
 		B8AB0EC825DB356F003A5BB9 /* PalletAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EC725DB356F003A5BB9 /* PalletAnnotationView.swift */; };
 		B8AB0ED125DB6ABA003A5BB9 /* FleetListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0ED025DB6ABA003A5BB9 /* FleetListVC.swift */; };
 		B8AB0EE125DB6E6B003A5BB9 /* FleetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EDF25DB6E6B003A5BB9 /* FleetListCell.swift */; };
 		B8AB0EE225DB6E6B003A5BB9 /* FleetListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8AB0EE025DB6E6B003A5BB9 /* FleetListCell.xib */; };
-		B8AB0EE725DB7419003A5BB9 /* Fleet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */; };
 		B8AB0EEE25DB7CF1003A5BB9 /* FleetListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EED25DB7CF1003A5BB9 /* FleetListVM.swift */; };
 		B8AB0EF325DB97A8003A5BB9 /* ExpandableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EF225DB97A8003A5BB9 /* ExpandableContainerView.swift */; };
 		B8E1B79325DDEBAE003D0391 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1B79225DDEBAE003D0391 /* SettingsVC.swift */; };
@@ -75,11 +75,11 @@
 		B8850D8025DD9FC000CF2C10 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B8850D8325DDC9BB00CF2C10 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B88D16F525DE038D00B3031C /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		B88D16F825DE1DC500B3031C /* PalletDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalletDetailVC.swift; sourceTree = "<group>"; };
 		B8AB0EC725DB356F003A5BB9 /* PalletAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalletAnnotationView.swift; sourceTree = "<group>"; };
 		B8AB0ED025DB6ABA003A5BB9 /* FleetListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetListVC.swift; sourceTree = "<group>"; };
 		B8AB0EDF25DB6E6B003A5BB9 /* FleetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetListCell.swift; sourceTree = "<group>"; };
 		B8AB0EE025DB6E6B003A5BB9 /* FleetListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FleetListCell.xib; sourceTree = "<group>"; };
-		B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fleet.storyboard; sourceTree = "<group>"; };
 		B8AB0EED25DB7CF1003A5BB9 /* FleetListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetListVM.swift; sourceTree = "<group>"; };
 		B8AB0EF225DB97A8003A5BB9 /* ExpandableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableContainerView.swift; sourceTree = "<group>"; };
 		B8E1B79225DDEBAE003D0391 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 				B8AB0ED025DB6ABA003A5BB9 /* FleetListVC.swift */,
 				B8AB0EDF25DB6E6B003A5BB9 /* FleetListCell.swift */,
 				B8AB0EE025DB6E6B003A5BB9 /* FleetListCell.xib */,
-				B8AB0EE625DB7419003A5BB9 /* Fleet.storyboard */,
+				B88D16F825DE1DC500B3031C /* PalletDetailVC.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -330,7 +330,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8AB0EE725DB7419003A5BB9 /* Fleet.storyboard in Resources */,
 				B82819E725DC4C2B008DD025 /* Main.storyboard in Resources */,
 				B82819E625DC4C2B008DD025 /* LaunchScreen.storyboard in Resources */,
 				B82819E525DC4C2B008DD025 /* Assets.xcassets in Resources */,
@@ -366,6 +365,7 @@
 				B8AB0EC825DB356F003A5BB9 /* PalletAnnotationView.swift in Sources */,
 				B841BC1A25D9AE4A00AF8712 /* NetworkService.swift in Sources */,
 				B82819F925DC4DD0008DD025 /* ViewController+Extension.swift in Sources */,
+				B88D16F925DE1DC500B3031C /* PalletDetailVC.swift in Sources */,
 				B8850D8125DD9FC000CF2C10 /* User.swift in Sources */,
 				B8AB0EEE25DB7CF1003A5BB9 /* FleetListVM.swift in Sources */,
 				B841BC1925D9AE4A00AF8712 /* NetworkContext.swift in Sources */,

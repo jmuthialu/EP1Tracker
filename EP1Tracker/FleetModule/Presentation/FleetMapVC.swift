@@ -33,7 +33,7 @@ class FleetMapVC: UIViewController {
         mapView.register(PalletAnnotationView.self, forAnnotationViewWithReuseIdentifier: "pallet")
         
         addMapListView()
-        addRefreshControl()
+        addRefreshButton()
         addForegroundObserver()
     }
     
@@ -46,11 +46,13 @@ class FleetMapVC: UIViewController {
         viewModel.$pallets
             .sink { [weak self] (pallets) in
                 guard pallets.count > 0 else { return }
+                guard let self = self else { return }
                 
                 DispatchQueue.main.async {
-                    self?.setRegion(pallets: pallets)
-                    self?.mapView.addAnnotations(pallets)
-                    self?.fleetListVC?.viewModel.loadData(pallets: pallets)
+                    self.mapView.removeAnnotations(self.mapView.annotations)
+                    self.setRegion(pallets: pallets)
+                    self.mapView.addAnnotations(pallets)
+                    self.fleetListVC?.viewModel.loadData(pallets: pallets)
                 }
             }.store(in: &cancellable)
     }
@@ -91,7 +93,7 @@ class FleetMapVC: UIViewController {
                                   childController: fleetListVC)
     }
     
-    func addRefreshControl() {
+    func addRefreshButton() {
         let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh,
                                         target: self,
                                         action: #selector(refreshData))

@@ -85,8 +85,7 @@ class PalletAnnotationView: MKAnnotationView {
     
     func configureAccessoryView() {
         canShowCallout = true
-        let accessoryView = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        accessoryView.setImage(UIImage(named: "truck"), for: .normal)
+        let accessoryView = UIButton(type: .detailDisclosure) 
         rightCalloutAccessoryView = accessoryView
     }
     

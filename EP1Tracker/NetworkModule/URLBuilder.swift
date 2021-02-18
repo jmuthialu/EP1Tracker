@@ -9,9 +9,10 @@
 import Foundation
 
 struct NetworkConstants {
-    static let scheme = "https"
+    static let scheme = "https" 
     static let host = "eptracker.azurewebsites.net"
     static let epallets = "/epallets"
+    static let authenticateUser = "/users/authenticate"
 }
 
 struct URLBuilder {
@@ -23,10 +24,16 @@ struct URLBuilder {
         return components.url
     }
  
-    static func getAllPallets() -> URL? {
+    static func allPalletsUrl() -> URL? {
         guard let baseUrl = baseURL() else { return nil }
         let epalletsUrl = baseUrl.appendingPathComponent(NetworkConstants.epallets)
         return epalletsUrl
+    }
+
+    static func authenticateUserUrl() -> URL? {
+        guard let baseUrl = baseURL() else { return nil }
+        let userUrl = baseUrl.appendingPathComponent(NetworkConstants.authenticateUser)
+        return userUrl
     }
     
 }

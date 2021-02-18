@@ -1,5 +1,5 @@
 //
-//  NetworkOperation.swift
+//  NetworkGetOperation.swift
 //  Ep1Tracker
 //
 //  Created by Jay Muthialu on 2/14/21.
@@ -8,17 +8,15 @@
 
 import Foundation
 
-class NetworkOperation: Operation {
+class NetworkGetOperation: Operation {
     
     var url: URL?
-    var method = "GET"
     var context: NetworkContext?
     var dispatchQueue = DispatchQueue(label: "networkQueue")
     
-    init(url: URL?, context: NetworkContext?, method: String = "GET") {
+    init(url: URL?, context: NetworkContext?) {
         super.init()
         self.url = url
-        self.method = method
         self.context = context
     }
     
@@ -26,12 +24,7 @@ class NetworkOperation: Operation {
         guard let url = url else { return }
         guard let context = context else { return }
         
-        var request = URLRequest(url: url)
         let dispatchGroup = DispatchGroup()
-        
-        request.httpMethod = method
-        // Values set for POST
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         dispatchGroup.enter()
         
         let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in

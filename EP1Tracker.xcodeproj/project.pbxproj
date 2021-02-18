@@ -39,7 +39,21 @@
 		B8AB0EEE25DB7CF1003A5BB9 /* FleetListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EED25DB7CF1003A5BB9 /* FleetListVM.swift */; };
 		B8AB0EF325DB97A8003A5BB9 /* ExpandableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0EF225DB97A8003A5BB9 /* ExpandableContainerView.swift */; };
 		B8E1B79325DDEBAE003D0391 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1B79225DDEBAE003D0391 /* SettingsVC.swift */; };
+		B8E9909E25DED731004C58EE /* FleetModule.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E9909C25DED731004C58EE /* FleetModule.jpg */; };
+		B8E9909F25DED731004C58EE /* UserModule.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E9909D25DED731004C58EE /* UserModule.jpg */; };
+		B8E990E825DEE3B2004C58EE /* LockTestSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E990E725DEE3B2004C58EE /* LockTestSuccess.swift */; };
+		B8E990FA25DEE738004C58EE /* LockTestFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E990F925DEE738004C58EE /* LockTestFail.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8E990EA25DEE3B2004C58EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B841BBE725D9AD5B00AF8712 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B841BBEE25D9AD5B00AF8712;
+			remoteInfo = EP1Tracker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B82819D525DC4C25008DD025 /* GPS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GPS.png; sourceTree = "<group>"; };
@@ -83,10 +97,23 @@
 		B8AB0EED25DB7CF1003A5BB9 /* FleetListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetListVM.swift; sourceTree = "<group>"; };
 		B8AB0EF225DB97A8003A5BB9 /* ExpandableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableContainerView.swift; sourceTree = "<group>"; };
 		B8E1B79225DDEBAE003D0391 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		B8E9909C25DED731004C58EE /* FleetModule.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FleetModule.jpg; sourceTree = "<group>"; };
+		B8E9909D25DED731004C58EE /* UserModule.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UserModule.jpg; sourceTree = "<group>"; };
+		B8E990E525DEE3B2004C58EE /* EP1TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EP1TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E990E725DEE3B2004C58EE /* LockTestSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockTestSuccess.swift; sourceTree = "<group>"; };
+		B8E990E925DEE3B2004C58EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E990F925DEE738004C58EE /* LockTestFail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockTestFail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B841BBEC25D9AD5B00AF8712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E990E225DEE3B2004C58EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,6 +210,8 @@
 			children = (
 				B841BC2425D9B0E900AF8712 /* README.md */,
 				B841BBF125D9AD5B00AF8712 /* EP1Tracker */,
+				B8E9909B25DED731004C58EE /* UMLDiagram */,
+				B8E990E625DEE3B2004C58EE /* EP1TrackerTests */,
 				B841BBF025D9AD5B00AF8712 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				B841BBEF25D9AD5B00AF8712 /* EP1Tracker.app */,
+				B8E990E525DEE3B2004C58EE /* EP1TrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,9 +231,9 @@
 				B841BC0B25D9ADD700AF8712 /* FleetModule */,
 				B840D26125DCE759002F9D21 /* UserModule */,
 				B8E1B79125DDEB8C003D0391 /* Settings Module */,
+				B841BC0C25D9ADE500AF8712 /* NetworkModule */,
 				B8850D8725DDCAC300CF2C10 /* Services */,
 				B8281A1525DCBED8008DD025 /* Shared Components */,
-				B841BC0C25D9ADE500AF8712 /* NetworkModule */,
 				B82819F325DC4DD0008DD025 /* Utilities */,
 				B82819DC25DC4C2B008DD025 /* Supporting Files */,
 				B82819D325DC4C25008DD025 /* Images */,
@@ -273,6 +303,25 @@
 			path = "Settings Module";
 			sourceTree = "<group>";
 		};
+		B8E9909B25DED731004C58EE /* UMLDiagram */ = {
+			isa = PBXGroup;
+			children = (
+				B8E9909C25DED731004C58EE /* FleetModule.jpg */,
+				B8E9909D25DED731004C58EE /* UserModule.jpg */,
+			);
+			path = UMLDiagram;
+			sourceTree = SOURCE_ROOT;
+		};
+		B8E990E625DEE3B2004C58EE /* EP1TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8E990E725DEE3B2004C58EE /* LockTestSuccess.swift */,
+				B8E990F925DEE738004C58EE /* LockTestFail.swift */,
+				B8E990E925DEE3B2004C58EE /* Info.plist */,
+			);
+			path = EP1TrackerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,6 +342,24 @@
 			productReference = B841BBEF25D9AD5B00AF8712 /* EP1Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B8E990E425DEE3B2004C58EE /* EP1TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E990EE25DEE3B2004C58EE /* Build configuration list for PBXNativeTarget "EP1TrackerTests" */;
+			buildPhases = (
+				B8E990E125DEE3B2004C58EE /* Sources */,
+				B8E990E225DEE3B2004C58EE /* Frameworks */,
+				B8E990E325DEE3B2004C58EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8E990EB25DEE3B2004C58EE /* PBXTargetDependency */,
+			);
+			name = EP1TrackerTests;
+			productName = EP1TrackerTests;
+			productReference = B8E990E525DEE3B2004C58EE /* EP1TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -304,6 +371,10 @@
 				TargetAttributes = {
 					B841BBEE25D9AD5B00AF8712 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					B8E990E425DEE3B2004C58EE = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = B841BBEE25D9AD5B00AF8712;
 					};
 				};
 			};
@@ -321,6 +392,7 @@
 			projectRoot = "";
 			targets = (
 				B841BBEE25D9AD5B00AF8712 /* EP1Tracker */,
+				B8E990E425DEE3B2004C58EE /* EP1TrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -330,10 +402,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E9909F25DED731004C58EE /* UserModule.jpg in Resources */,
 				B82819E725DC4C2B008DD025 /* Main.storyboard in Resources */,
+				B8E9909E25DED731004C58EE /* FleetModule.jpg in Resources */,
 				B82819E625DC4C2B008DD025 /* LaunchScreen.storyboard in Resources */,
 				B82819E525DC4C2B008DD025 /* Assets.xcassets in Resources */,
 				B8AB0EE225DB6E6B003A5BB9 /* FleetListCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E990E325DEE3B2004C58EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +456,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8E990E125DEE3B2004C58EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E990FA25DEE738004C58EE /* LockTestFail.swift in Sources */,
+				B8E990E825DEE3B2004C58EE /* LockTestSuccess.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8E990EB25DEE3B2004C58EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B841BBEE25D9AD5B00AF8712 /* EP1Tracker */;
+			targetProxy = B8E990EA25DEE3B2004C58EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B82819DE25DC4C2B008DD025 /* LaunchScreen.storyboard */ = {
@@ -551,6 +649,46 @@
 			};
 			name = Release;
 		};
+		B8E990EC25DEE3B2004C58EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QP8Z378EKD;
+				INFOPLIST_FILE = EP1TrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightspot.EP1TrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EP1Tracker.app/EP1Tracker";
+			};
+			name = Debug;
+		};
+		B8E990ED25DEE3B2004C58EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QP8Z378EKD;
+				INFOPLIST_FILE = EP1TrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightspot.EP1TrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EP1Tracker.app/EP1Tracker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,6 +706,15 @@
 			buildConfigurations = (
 				B841BC0425D9AD5C00AF8712 /* Debug */,
 				B841BC0525D9AD5C00AF8712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8E990EE25DEE3B2004C58EE /* Build configuration list for PBXNativeTarget "EP1TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E990EC25DEE3B2004C58EE /* Debug */,
+				B8E990ED25DEE3B2004C58EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

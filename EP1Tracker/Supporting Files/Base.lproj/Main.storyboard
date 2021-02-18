@@ -300,18 +300,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUa-Rm-QiH">
+                                <rect key="frame" x="15" y="326" width="384" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="77Q-RD-7Jy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="IUa-Rm-QiH" firstAttribute="top" secondItem="mDp-RT-541" secondAttribute="bottom" constant="60.5" id="44H-Lm-Cdh"/>
                             <constraint firstItem="raw-bu-Atl" firstAttribute="top" secondItem="eiN-jm-Vbt" secondAttribute="bottom" constant="70" id="9GE-9b-xTP"/>
                             <constraint firstItem="raw-bu-Atl" firstAttribute="leading" secondItem="mDp-RT-541" secondAttribute="trailing" constant="30" id="CpV-fn-IGT"/>
                             <constraint firstItem="77Q-RD-7Jy" firstAttribute="trailing" secondItem="Kl7-Fm-KFr" secondAttribute="trailing" constant="30" id="CqM-J0-9Pk"/>
                             <constraint firstItem="77Q-RD-7Jy" firstAttribute="trailing" secondItem="eiN-jm-Vbt" secondAttribute="trailing" constant="15" id="EkY-ts-KVE"/>
+                            <constraint firstItem="77Q-RD-7Jy" firstAttribute="trailing" secondItem="IUa-Rm-QiH" secondAttribute="trailing" constant="15" id="LEL-rA-utf"/>
                             <constraint firstItem="eiN-jm-Vbt" firstAttribute="centerX" secondItem="Qqh-6W-QKp" secondAttribute="centerX" id="P8N-vj-gxf"/>
                             <constraint firstItem="Kl7-Fm-KFr" firstAttribute="top" secondItem="77Q-RD-7Jy" secondAttribute="top" constant="20" id="W3B-uo-csh"/>
+                            <constraint firstItem="IUa-Rm-QiH" firstAttribute="centerX" secondItem="Qqh-6W-QKp" secondAttribute="centerX" id="XxB-At-lER"/>
                             <constraint firstItem="eiN-jm-Vbt" firstAttribute="top" secondItem="77Q-RD-7Jy" secondAttribute="top" constant="100" id="ZH5-kp-MxU"/>
                             <constraint firstItem="mDp-RT-541" firstAttribute="centerY" secondItem="raw-bu-Atl" secondAttribute="centerY" id="bHp-bs-GfV"/>
+                            <constraint firstItem="IUa-Rm-QiH" firstAttribute="leading" secondItem="77Q-RD-7Jy" secondAttribute="leading" constant="15" id="cSd-HF-1BF"/>
                             <constraint firstItem="yTA-nq-xBd" firstAttribute="leading" secondItem="raw-bu-Atl" secondAttribute="trailing" constant="30" id="fe9-88-LjC"/>
                             <constraint firstItem="eiN-jm-Vbt" firstAttribute="leading" secondItem="77Q-RD-7Jy" secondAttribute="leading" constant="15" id="lRB-NB-jcs"/>
                             <constraint firstItem="raw-bu-Atl" firstAttribute="centerX" secondItem="Qqh-6W-QKp" secondAttribute="centerX" constant="50" id="r8B-Vb-wbX"/>
@@ -320,6 +330,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="yTA-nq-xBd" id="rKh-aN-GIF"/>
+                        <outlet property="lockErrorLabel" destination="IUa-Rm-QiH" id="gjB-9j-Pkn"/>
                         <outlet property="lockSwitch" destination="raw-bu-Atl" id="DGF-Dm-Bvt"/>
                         <outlet property="palletTitleLabel" destination="eiN-jm-Vbt" id="jqF-nO-a3h"/>
                     </connections>
@@ -331,7 +342,7 @@
     </scenes>
     <resources>
         <image name="GPSLocation" width="256" height="256"/>
-        <image name="dismiss" width="512" height="512"/>
+        <image name="dismiss" width="256" height="256"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="shippingbox.fill" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">

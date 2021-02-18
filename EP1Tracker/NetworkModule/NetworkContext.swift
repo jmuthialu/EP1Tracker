@@ -19,7 +19,7 @@ class NetworkContext {
     var finalDecodedObject: Any?
     
     // netowrk JSON data is Parsed and converted as dict
-    var jsonParsedDict: [String: Any?]?
+    var jsonParsedDict: [String: Any]?
     
     var error: Error?
 }

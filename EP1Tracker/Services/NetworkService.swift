@@ -50,7 +50,8 @@ class NetworkService {
     
     func updatePallet(palletId: String,
                       isLocked: String,
-                      completion: @escaping (_ error: Error?) -> Void)  {
+                      completion: @escaping (_ result: [String: Any]?,
+                                                                _ error: Error?) -> Void)  {
         
         guard let updateUrl = URLBuilder
                 .lockUrlByPalletId(palletId: palletId,
@@ -62,8 +63,10 @@ class NetworkService {
         let updateOperation = NetworkPostOperation(url: updateUrl,
                                                          context: context,
                                                          httpBody: nil)
+        let jsonParserOperation = JSONParserOperation(context: context)
         networkOperationQueue.addOperation(updateOperation)
-        networkOperationQueue.addOperation { completion(context.error) }
+        networkOperationQueue.addOperation(jsonParserOperation)
+        networkOperationQueue.addOperation { completion(context.jsonParsedDict, context.error) }
         
     }
 }

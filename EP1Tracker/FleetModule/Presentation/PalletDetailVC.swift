@@ -16,6 +16,7 @@ class PalletDetailVC: UIViewController {
     @IBOutlet weak var palletTitleLabel: UILabel!
     @IBOutlet weak var lockSwitch: UISwitch!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var lockErrorLabel: UILabel!
     
     var pallet = Pallet()
     weak var delegate: PalletDelegate?
@@ -23,6 +24,7 @@ class PalletDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        lockErrorLabel.text = ""
         palletTitleLabel.text = pallet.title
         pallet.isLocked ?
             lockSwitch.setOn(true, animated: true):
@@ -30,12 +32,20 @@ class PalletDetailVC: UIViewController {
     }
     
     @IBAction func switchTapped(_ sender: Any) {
+        
         activityIndicator.startAnimating()
+        lockErrorLabel.text = ""
         let isLocked = lockSwitch.isOn ? true: false
+        
         pallet.lock(isLocked: isLocked) { [weak self] error in
+            
             DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()
-                self?.delegate?.lockToggled()
+                if let _ = error {
+                    self?.lockErrorLabel.text = "Locking functionality failed!! Please try again."
+                } else {
+                    self?.delegate?.lockToggled()
+                }   
             }
         }
     }    

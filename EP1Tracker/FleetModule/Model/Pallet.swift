@@ -26,13 +26,19 @@ class Pallet: NSObject, MKAnnotation, Decodable {
         let lockString = isLocked ? "true": "false"
         
         NetworkService.shared.updatePallet(palletId: String(id),
-                                           isLocked: lockString) { (error) in
+                                           isLocked: lockString) { (result, error) in
             if let error = error {
                 print("Lock Error: \(error)")
                 completion(error)
             } else {
-                print("Lock successfully set to \(lockString)!!")
-                completion(nil)
+                if let resultFlag = result?["status"] as? Bool, resultFlag {
+                    print("Lock successfully set to \(lockString)!!")
+                    completion(nil)
+                } else {
+                    let error = NSError(domain: "Server failed to lock", code: 120, userInfo: nil)
+                    print("Lock Errored out:  \(error)!!")
+                    completion(error)
+                }
             }
         }
     }

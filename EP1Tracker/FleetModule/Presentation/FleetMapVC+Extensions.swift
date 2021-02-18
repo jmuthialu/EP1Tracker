@@ -29,9 +29,7 @@ extension FleetMapVC : MKMapViewDelegate {
             }
             
         }
-        
     }
-    
     
 }
 

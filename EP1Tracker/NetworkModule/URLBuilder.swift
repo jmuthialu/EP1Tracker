@@ -9,9 +9,8 @@
 import Foundation
 
 struct NetworkConstants {
-    static let scheme = "http"
-    static let host = "192.168.1.211" // eptracker.azurewebsites.net"
-    static let port = 8080
+    static let scheme = "https"
+    static let host = "eptracker.azurewebsites.net"
     static let epallets = "/epallets"
     static let authenticateUser = "/users/authenticate"
 }
@@ -22,7 +21,6 @@ struct URLBuilder {
         var components = URLComponents()
         components.scheme = NetworkConstants.scheme
         components.host = NetworkConstants.host
-        components.port = NetworkConstants.port
         return components
     }
  
